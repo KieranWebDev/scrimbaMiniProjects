@@ -1,0 +1,14 @@
+.planets-list {
+  display: flex;
+  list-style-type: none;
+  gap: 3%;
+}
+.planets-list li {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: underline;
+}
+.planets-list li:hover {
+  text-decoration: none;
+}
