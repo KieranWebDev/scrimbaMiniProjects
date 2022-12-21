@@ -70,7 +70,7 @@ async function fetchRandomBeerInfo() {
 const beerButton = document.querySelector('.getBeer');
 
 beerButton.addEventListener('click', fetchRandomBeerInfo);
-
+//
 // NEW TASK
 
 async function fetchPlanetData(url) {
