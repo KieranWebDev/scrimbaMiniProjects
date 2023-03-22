@@ -50,3 +50,18 @@ body {
 .hero-container input::placeholder {
   color: white;
 }
+.hero-container button {
+  font-family: inherit;
+  color: black;
+  background-color: white;
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+}
+.hero-container button:hover {
+  cursor: pointer;
+  background-color: aqua;
+  box-shadow: none;
+}
