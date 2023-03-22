@@ -18,8 +18,8 @@ body {
 .app-container {
   margin-top: 80px;
   width: clamp(300px, 100%, 600px);
-  border: 1px solid black;
-  border-radius: 6px;
+
+  border-radius: 16px;
 }
 .hero-container {
   height: 275px;
@@ -29,6 +29,7 @@ body {
   justify-content: space-around;
   background-color: #6943ff;
   color: white;
+  border-radius: 10px 10px 0 0;
 }
 .hero-container h1 {
   font-size: 28px;
@@ -64,4 +65,22 @@ body {
   cursor: pointer;
   background-color: aqua;
   box-shadow: none;
+}
+.unit-display-section {
+  padding: 2rem;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 0 0 10px 10px;
+}
+.unit-container {
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+}
+.unit-container h3 {
+  font-weight: 600;
+  color: #5a537b;
+  margin-bottom: 1rem;
 }
