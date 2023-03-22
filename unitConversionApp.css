@@ -9,8 +9,44 @@ html {
   padding: 0;
 }
 body {
-  width: clamp(300px, 100%, 600px);
+  font-family: 'Inter', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.app-container {
+  margin-top: 80px;
+  width: clamp(300px, 100%, 600px);
+  border: 1px solid black;
+  border-radius: 6px;
+}
+.hero-container {
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #6943ff;
+  color: white;
+}
+.hero-container h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+.hero-container input {
+  background-color: #6943ff;
+  border: 1px solid white;
+  color: white;
+
+  height: 80px;
+  width: 100px;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  text-indent: 10px;
+  border-radius: 6px;
+}
+.hero-container input::placeholder {
+  color: white;
 }
