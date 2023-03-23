@@ -36,6 +36,9 @@ header {
   padding: 0 0.8rem;
   border-bottom: 3px solid #ededed;
 }
+header.container {
+  margin-bottom: 0;
+}
 .avatar-img {
   width: 30px;
   height: 30px;
