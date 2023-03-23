@@ -37,3 +37,8 @@ convertBtn.addEventListener('click', () => {
   volumeConversion(convertInput.value);
   massConversion(convertInput.value);
 });
+// convertInput.addEventListener('input', () => {
+//   lengthConversion(convertInput.value);
+//   volumeConversion(convertInput.value);
+//   massConversion(convertInput.value);
+// });
