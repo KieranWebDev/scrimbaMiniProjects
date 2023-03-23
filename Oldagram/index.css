@@ -14,15 +14,20 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 13px;
   background-color: lightgrey;
+  /* margin: 0 auto; */
+  /* max-width: 375px;
+  min-width: 300px;  */
 }
 img {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
-
-.container {
+.app-container {
   max-width: 375px;
+  min-width: 300px;
   margin: 0 auto;
+}
+.container {
   margin-bottom: 1rem;
   border: 1px solid #c6c6c6;
   background-color: white;

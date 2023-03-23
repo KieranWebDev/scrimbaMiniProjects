@@ -1,6 +1,7 @@
 import posts from './data.js';
 
 let body = document.querySelector('body');
+let appContainer = document.querySelector('.app-container');
 
 posts.forEach((post) => {
   const container = document.createElement('div');
@@ -29,7 +30,7 @@ posts.forEach((post) => {
 </div>
 </section>
 `;
-  body.appendChild(container);
+  appContainer.append(container);
 });
 
 const likebtn = document.querySelectorAll('#like-btn');
