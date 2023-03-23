@@ -28,3 +28,4 @@ const posts = [
     likes: 152,
   },
 ];
+export default posts;

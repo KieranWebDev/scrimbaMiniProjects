@@ -1,5 +1,16 @@
-import data from './data.js';
+import posts from './data.js';
 
+const name = document.querySelector('#name');
+const username = document.querySelector('#username');
+const location = document.querySelector('#location');
+const avatar = document.querySelector('#avatar');
+const post = document.querySelector('#post');
+const comment = document.querySelector('#comment');
+const likes = document.querySelector('#likes');
+const like = document.querySelector('#like');
+
+const testing = posts[0].name;
+console.log(testing);
 // const posts = [
 //     {
 //         name: "Vincent van Gogh",
