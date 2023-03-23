@@ -13,6 +13,7 @@ html {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 13px;
+  background-color: lightgrey;
 }
 img {
   display: block;
@@ -20,9 +21,11 @@ img {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 375px;
   margin: 0 auto;
-  border: 1px solid black;
+  margin-bottom: 1rem;
+  border: 1px solid #c6c6c6;
+  background-color: white;
 }
 
 /* header */
@@ -40,8 +43,8 @@ header {
   border-radius: 50%;
 }
 .logo {
-  max-width: 180px;
-  height: 80px;
+  max-width: 150px;
+  /* height: 80px; */
 }
 
 /* post */
@@ -57,11 +60,26 @@ header {
   width: 100%;
   object-fit: cover;
 }
+.info-and-button-container {
+  padding: 1rem 0.8rem;
+}
 
 .icons {
   display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
 }
 .icons img {
   height: 30px;
   width: 30px;
+}
+.icons button {
+  background-color: inherit;
+  border: none;
+}
+.info-and-button-container p:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+.bold {
+  font-weight: bold;
 }
