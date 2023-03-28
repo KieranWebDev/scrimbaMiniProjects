@@ -1,4 +1,4 @@
-const tweetsData = [
+let tweetsDataRaw = [
   {
     handle: `@TrollBot66756542 💎`,
     profilePic: `images/troll.jpg`,
@@ -57,4 +57,4 @@ const tweetsData = [
   },
 ];
 
-export default tweetsData;
+export default tweetsDataRaw;
