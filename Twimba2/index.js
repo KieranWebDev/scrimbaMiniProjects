@@ -26,6 +26,29 @@ function renderTweets(tweetsData) {
 
     twitterFeed.appendChild(tweet);
   });
+  const likes = document.querySelectorAll('#likes');
+
+  // const reTweet = document.querySelector('#retweet');
+
+  likes.forEach((like, index) => {
+    like.addEventListener('click', () => {
+      let isLiked = tweetsData[index].isLiked;
+      console.log(isLiked);
+
+      console.log(index);
+      isLiked = !isLiked;
+      console.log(isLiked);
+      //   isLiked = !isLiked;
+
+      if (isLiked === true) {
+        tweetsData[index].likes += 1;
+        likes[index].textContent = '❤' + tweetsData[index].likes;
+      } else if (isLiked === false) {
+        tweetsData[index].likes -= 1;
+        likes[index].textContent = '❤' + tweetsData[index].likes;
+      }
+    });
+  });
 }
 
 renderTweets(tweetsData);
@@ -50,9 +73,7 @@ function addTweet() {
     };
     tweetsData = [newTweetObj, ...tweetsData];
     userTweet.value = '';
-    // return tweetsDataUpdated;
     console.log(tweetsData);
     renderTweets(tweetsData);
   }
-  //   console.log(tweetsData);
 }
