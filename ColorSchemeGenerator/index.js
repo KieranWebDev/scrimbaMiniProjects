@@ -15,25 +15,46 @@ function fetchColors(
   )
     .then((response) => response.json())
     .then((data) => {
-      const colorScheme = {
-        colorOne: data.colors[0].hex.value,
-        colorTwo: data.colors[1].hex.value,
-        colorThree: data.colors[2].hex.value,
-        colorFour: data.colors[3].hex.value,
-        colorFive: data.colors[4].hex.value,
-      };
-      console.log(colorScheme);
+      const colorScheme = [
+        { color: data.colors[0].hex.value },
+        { color: data.colors[1].hex.value },
+        { color: data.colors[2].hex.value },
+        { color: data.colors[3].hex.value },
+        { color: data.colors[4].hex.value },
+      ];
+      const colorsHtml = colorScheme
+        .map(
+          (color) => `
+        <div class="color-box ">
+        <div class="color-box-color" style='background: ${color.color}'></div>
+        <div class="color-box-hex first-hex">${color.color}</div>
+      </div>
+      `
+        )
+        .join('');
+      document.querySelector('.color-scheme-container').innerHTML = colorsHtml;
+      console.log(colorsHtml);
     });
 }
 
 fetchColors();
 
-//   function getColors(e) {
-//   e.preventDefault();
-//   let chosenColors = colorPickerInput.value;
-//   console.log(chosenColors);
+// function render() {
+//   const colorsHtml = colorScheme.map(
+//     (color) => `
+//   <div class="color-box ">
+//   <div class="color-box-color first-color"></div>
+//   <div class="color-box-hex first-hex">#${color.colorOne}</div>
+// </div>
+// `
+//   );
+//   console.log(colorsHtml);
 // }
 
-function render() {}
-
-// form.addEventListener('submit', getColors);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const chosenColor = colorPickerInput.value.slice(1);
+  const chosenScheme = ColorSchemeInput.value;
+  console.log(chosenColor, chosenScheme);
+  fetchColors(chosenColor, chosenScheme);
+});
