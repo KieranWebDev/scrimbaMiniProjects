@@ -8,3 +8,76 @@ html {
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: black; */
+}
+.app-container {
+  max-width: 550px;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  margin: 0 1em;
+}
+form {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5em 1em;
+  gap: 1em;
+}
+form input,
+form select,
+form button {
+  height: 40px;
+  border-radius: 5px;
+  font-family: inherit;
+  padding: 0.5em;
+  background-color: inherit;
+}
+form input {
+  padding: 0;
+}
+form button {
+  background-color: inherit;
+  cursor: pointer;
+}
+form select {
+  flex-grow: 2;
+}
+
+.color-scheme-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.color-box {
+  border: 1px solid black;
+  flex-basis: 20%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.color-box-color {
+  flex-basis: 300px;
+  background-color: lightblue;
+}
+.color-box-hex {
+  text-align: center;
+  padding: 0.5em;
+}
+@media (max-width: 350px) {
+  .color-box-hex {
+    font-size: 0.8em;
+  }
+  .color-box-color {
+    flex-basis: 150px;
+  }
+}
