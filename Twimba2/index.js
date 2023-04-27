@@ -26,28 +26,46 @@ function renderTweets(tweetsData) {
 
     twitterFeed.appendChild(tweet);
   });
-  const likes = document.querySelectorAll('#likes');
+  //   const likes = document.querySelectorAll('#likes');
 
-  // const reTweet = document.querySelector('#retweet');
+  //   const reTweet = document.querySelector('#retweet');
 
-  likes.forEach((like, index) => {
-    like.addEventListener('click', () => {
-      let isLiked = tweetsData[index].isLiked;
-      console.log(isLiked);
+  //   likes.forEach((like, index) => {
+  //     like.addEventListener('click', () => {
+  //       let isLiked = tweetsData[index].isLiked;
+  //       console.log(isLiked);
 
-      console.log(index);
-      isLiked = !isLiked;
-      console.log(isLiked);
-      //   isLiked = !isLiked;
+  //       console.log(index);
+  //       isLiked = !isLiked;
+  //       console.log(isLiked);
+  //       //   isLiked = !isLiked;
 
-      if (isLiked === true) {
-        tweetsData[index].likes += 1;
-        likes[index].textContent = '❤' + tweetsData[index].likes;
-      } else if (isLiked === false) {
-        tweetsData[index].likes -= 1;
-        likes[index].textContent = '❤' + tweetsData[index].likes;
+  //       if (isLiked === true) {
+  //         tweetsData[index].likes += 1;
+  //         likes[index].textContent = '❤' + tweetsData[index].likes;
+  //       } else if (isLiked === false) {
+  //         tweetsData[index].likes -= 1;
+  //         likes[index].textContent = '❤' + tweetsData[index].likes;
+  //       }
+  //     });
+  // });
+  const replies = document.querySelectorAll('#replies');
+  const tweet = document.querySelectorAll('#tweet');
+
+  replies.forEach((reply, index) => {
+    reply.addEventListener('click', () => {
+      if (tweetsData[index].replies.length === 0) {
+        console.log('no replies');
+      } else {
+        tweetsData[index].replies.forEach((item) => {
+          const replyMessages = document.createElement('div');
+          replyMessages.innerHTML = `<p>${tweetsData.replies.handle}</p>`;
+          tweet[index].append(replyMessages);
+        });
       }
+      console.log(tweetsData[index].replies);
     });
+    // if(replies[index] !== null)
   });
 }
 
