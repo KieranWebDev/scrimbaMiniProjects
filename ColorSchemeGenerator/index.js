@@ -1,4 +1,4 @@
-//
+// selectors
 const colorPickerInput = document.querySelector('#color-picker');
 const ColorSchemeInput = document.querySelector('#color-scheme-type');
 const form = document.querySelector('#form');
@@ -33,28 +33,14 @@ function fetchColors(
         )
         .join('');
       document.querySelector('.color-scheme-container').innerHTML = colorsHtml;
-      console.log(colorsHtml);
     });
 }
 
 fetchColors();
 
-// function render() {
-//   const colorsHtml = colorScheme.map(
-//     (color) => `
-//   <div class="color-box ">
-//   <div class="color-box-color first-color"></div>
-//   <div class="color-box-hex first-hex">#${color.colorOne}</div>
-// </div>
-// `
-//   );
-//   console.log(colorsHtml);
-// }
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const chosenColor = colorPickerInput.value.slice(1);
   const chosenScheme = ColorSchemeInput.value;
-  console.log(chosenColor, chosenScheme);
   fetchColors(chosenColor, chosenScheme);
 });

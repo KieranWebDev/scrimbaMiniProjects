@@ -14,17 +14,17 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-color: black; */
+  background-color: beige;
 }
 .app-container {
   max-width: 550px;
-  border: 1px solid black;
   width: 100%;
   height: 100%;
   margin: 0 1em;
+  border-radius: 8px;
+  background-color: white;
 }
 form {
-  /* width: 100%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -47,6 +47,7 @@ form input {
 form button {
   background-color: inherit;
   cursor: pointer;
+  border: 1px solid black;
 }
 form select {
   flex-grow: 2;
@@ -59,7 +60,6 @@ form select {
   flex-wrap: wrap;
 }
 .color-box {
-  border: 1px solid black;
   flex-basis: 20%;
   flex-grow: 1;
   display: flex;
